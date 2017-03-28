@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="C:\Users\Potato\Desktop\umd-android-labs-master\ContentProviderLab\Kiosk4\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="867dad63c33388ff8c7644b236579355036d075f">
+        <dex dex="C:\Users\Potato\Desktop\umd-android-labs-master\ContentProviderLab\Kiosk4\app\build\intermediates\pre-dexed\debug\internal_impl-24.2.1_b698b61b6c2abdf0bb905a02301c273942d0e256.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Potato\Desktop\umd-android-labs-master\ContentProviderLab\Kiosk4\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="f6f5817987ca505e8428db7d54ef68296cc94400">
+        <dex dex="C:\Users\Potato\Desktop\umd-android-labs-master\ContentProviderLab\Kiosk4\app\build\intermediates\pre-dexed\debug\instant-run-bootstrap_dcff399035d9ed691c4673436797a01f19af17e6.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Potato\Desktop\umd-android-labs-master\ContentProviderLab\Kiosk4\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="d5c731fc64c03dfe04d51134955b483551c35849">
+        <dex dex="C:\Users\Potato\Desktop\umd-android-labs-master\ContentProviderLab\Kiosk4\app\build\intermediates\pre-dexed\debug\com.android.support-support-vector-drawable-24.2.1_bb5eb953a528cfdede7150f6cec0f1aee8a847c9.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Potato\Desktop\umd-android-labs-master\ContentProviderLab\Kiosk4\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="43b2dba6b5a0b14527961b75329d0b90025f15ea">
+        <dex dex="C:\Users\Potato\Desktop\umd-android-labs-master\ContentProviderLab\Kiosk4\app\build\intermediates\pre-dexed\debug\com.android.support-appcompat-v7-24.2.1_d550915bec2332b871687603f856464d86577c73.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Potato\Desktop\umd-android-labs-master\ContentProviderLab\Kiosk4\app\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="7e4389bd133359a2ff88623ff1e4ff93d6e6f780">
+        <dex dex="C:\Users\Potato\Desktop\umd-android-labs-master\ContentProviderLab\Kiosk4\app\build\intermediates\pre-dexed\debug\internal_impl-24.2.1_2417a3a5add08fe59d69d71d77b03f0ab967ff4b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Potato\Desktop\umd-android-labs-master\ContentProviderLab\Kiosk4\app\build\intermediates\exploded-aar\com.android.support\support-fragment\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="b9a1ac78ad7ef3abedc4a4b30cd92bcacb939d1f">
+        <dex dex="C:\Users\Potato\Desktop\umd-android-labs-master\ContentProviderLab\Kiosk4\app\build\intermediates\pre-dexed\debug\com.android.support-support-fragment-24.2.1_3a66a7510d35186b6af2da026be8a322064422a5.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Potato\Desktop\umd-android-labs-master\ContentProviderLab\Kiosk4\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="fc02b8a78d495e37f8dccc9c189bdeb73a5c8c71">
+        <dex dex="C:\Users\Potato\Desktop\umd-android-labs-master\ContentProviderLab\Kiosk4\app\build\intermediates\pre-dexed\debug\instant-run_e02f900c15dd7550173000645772c84b542cf1f1.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Potato\Desktop\umd-android-labs-master\ContentProviderLab\Kiosk4\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="fbf8da429efd5ad21e02e3e5ecaa1efc4167878d">
+        <dex dex="C:\Users\Potato\Desktop\umd-android-labs-master\ContentProviderLab\Kiosk4\app\build\intermediates\pre-dexed\debug\internal_impl-24.2.1_29d3cb2974f0ab6d07d2b0108f652e0082893bea.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Potato\Desktop\umd-android-labs-master\ContentProviderLab\Kiosk4\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="09b462bbcb77650284bd6614f1a32f360ef369f8">
+        <dex dex="C:\Users\Potato\Desktop\umd-android-labs-master\ContentProviderLab\Kiosk4\app\build\intermediates\pre-dexed\debug\com.android.support-support-media-compat-24.2.1_5483457cf459b6d6ca41ad66bb0e632eca3dae86.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Potato\Desktop\umd-android-labs-master\ContentProviderLab\Kiosk4\app\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="0ecb4b595fa0f0f8018a149ace3ea6525624f94e">
+        <dex dex="C:\Users\Potato\Desktop\umd-android-labs-master\ContentProviderLab\Kiosk4\app\build\intermediates\pre-dexed\debug\com.android.support-support-compat-24.2.1_7c304dabf22d2f1de2e9af089457e4cafb6ee6f8.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Potato\Desktop\umd-android-labs-master\ContentProviderLab\Kiosk4\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="9c4c3bc902450c39ed54de170db4fb12aea20a35">
+        <dex dex="C:\Users\Potato\Desktop\umd-android-labs-master\ContentProviderLab\Kiosk4\app\build\intermediates\pre-dexed\debug\com.android.support-support-core-utils-24.2.1_2b69f05112a5f63114c475bb396becc3c372250e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Potato\Desktop\umd-android-labs-master\ContentProviderLab\Kiosk4\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="935a969265b2a166b2d20415423f5f6e90fe16e0">
+        <dex dex="C:\Users\Potato\Desktop\umd-android-labs-master\ContentProviderLab\Kiosk4\app\build\intermediates\pre-dexed\debug\internal_impl-24.2.1_b39557a2c0c0141ae1121ec62cc8f75d7a75e22b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Potato\AppData\Local\Android\sdk1\extras\android\m2repository\com\android\support\support-annotations\24.2.1\support-annotations-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="8de3aafecbdf98a61db6427f008f2d515bcd2544">
+        <dex dex="C:\Users\Potato\Desktop\umd-android-labs-master\ContentProviderLab\Kiosk4\app\build\intermediates\pre-dexed\debug\support-annotations-24.2.1_7dc93c8e615c90d9d9b055f02fd52ea6ebbd4f70.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Potato\Desktop\umd-android-labs-master\ContentProviderLab\Kiosk4\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="94bc1dfb84dcc8b6f6f8f7cc726d7b2dd39c1574">
+        <dex dex="C:\Users\Potato\Desktop\umd-android-labs-master\ContentProviderLab\Kiosk4\app\build\intermediates\pre-dexed\debug\com.android.support-animated-vector-drawable-24.2.1_1ae164ac8c97d77fd0b7888b72dfff61700ff6b6.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Potato\Desktop\umd-android-labs-master\ContentProviderLab\Kiosk4\app\build\intermediates\exploded-aar\com.android.support\support-fragment\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="5f64d657e838e8375135c0f6057a7ff8fab6a50e">
+        <dex dex="C:\Users\Potato\Desktop\umd-android-labs-master\ContentProviderLab\Kiosk4\app\build\intermediates\pre-dexed\debug\internal_impl-24.2.1_283df3c600f1df6470db2e35c20b0fd0a4599cfc.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Potato\Desktop\umd-android-labs-master\ContentProviderLab\Kiosk4\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="e7f3132168957eefc46229fc32c3bd464642b71e">
+        <dex dex="C:\Users\Potato\Desktop\umd-android-labs-master\ContentProviderLab\Kiosk4\app\build\intermediates\pre-dexed\debug\com.android.support-support-core-ui-24.2.1_4b4250531b7c2699020db12c7cff0541cd05c52c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Potato\Desktop\umd-android-labs-master\ContentProviderLab\Kiosk4\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="C:\Users\Potato\Desktop\umd-android-labs-master\ContentProviderLab\Kiosk4\app\build\intermediates\pre-dexed\debug\com.android.support-support-v4-24.2.1_63f3b717f91ee8e1814915bb50087e557a176123.jar" />
+    </item>
+
+</items>
