@@ -1,19 +1,88 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/activity_main"
-    android:layout_width="match_parent"
+    android:orientation="horizontal" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.potato.kiosk4.MainActivity">
+    android:weightSum="1">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:src="@drawable/cs_logo"
+        android:scaleType="fitStart"
+        android:id="@+id/cslogo" />
+
+    <TextView
+        android:text=""
+        android:layout_width="match_parent"
+        android:id="@+id/divider"
+        android:background="@color/colorAccent"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_height="2px"
+        android:layout_below="@+id/welcomeText"
+        />
+
+    <TextView
+        android:id="@+id/announcements"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="*Important Announcements"
+        android:textSize="26sp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/divider"
+        android:layout_marginBottom="10dp"
+        />
+
+    <TextView
+        android:text=""
+        android:layout_width="match_parent"
+        android:id="@+id/divider2"
+        android:background="@color/colorAccent"
+        android:layout_marginBottom="10dp"
+        android:layout_height="2px"
+        android:layout_below="@+id/announcements"
+        />
+
+    <TextView
+        android:id="@+id/eventstext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Upcoming Events"
+        android:textSize="26sp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/divider2"
+        android:layout_marginBottom="10dp"
+        />
+
+    <TextView
+        android:text=""
+        android:layout_width="match_parent"
+        android:id="@+id/divider3"
+        android:background="@color/colorAccent"
+        android:layout_marginBottom="10dp"
+        android:layout_height="2px"
+        android:layout_below="@+id/eventstext"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/welcomeText"
+        android:text="Welcome to the Brendan Iribe Center!"
+        android:textSize="26sp"
+        android:layout_below="@id/cslogo"
+        android:layout_marginTop="18dp" />
+
 
     <ListView
         android:layout_width="match_parent"
-        android:layout_height="250dp"
         android:id="@+id/list"
-        android:layout_marginTop="60dp"
-        android:divider="@null" />
-</LinearLayout>
+        android:layout_marginTop="10dp"
+        android:divider="@null"
+        android:layout_below="@+id/divider3"
+        android:layout_alignParentStart="true"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="20dp" />
+
+</RelativeLayout>
