@@ -1,5 +1,6 @@
 package com.example.potato.kiosk4;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.ActionBar;
@@ -12,7 +13,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements ActionBar.TabListener{
-
+    int lastTab = -1;
     List<Events> items;
     ListView list;
 
@@ -55,6 +56,8 @@ public class MainActivity extends AppCompatActivity implements ActionBar.TabList
         int nTabSelected = tab.getPosition();
         switch (nTabSelected) {
             case 0:
+                if (lastTab != -1)
+                    recreate();
                 setContentView(R.layout.home_tab);
                 break;
             case 1:
@@ -67,6 +70,8 @@ public class MainActivity extends AppCompatActivity implements ActionBar.TabList
                 setContentView(R.layout.events_tab);
                 break;
         }
+
+        lastTab = tab.getPosition();
     }
 
     @Override
@@ -76,7 +81,7 @@ public class MainActivity extends AppCompatActivity implements ActionBar.TabList
 
     @Override
     public void onTabReselected(ActionBar.Tab tab, FragmentTransaction fragmentTransaction) {
-
+        this.recreate();
         // Called when a tab is selected again.
     }
     @Override
