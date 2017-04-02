@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="C:\Users\Potato\AppData\Local\Android\sdk1\extras\m2repository\com\android\support\constraint\constraint-layout-solver\1.0.2\constraint-layout-solver-1.0.2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="b9cd8fc6bd15cb915735d34535db30ece0c44603">
+        <dex dex="C:\Users\Potato\Desktop\CMSC434\Kiosk4\app\build\intermediates\pre-dexed\debug\constraint-layout-solver-1.0.2_6979921e479d0e35d65cccd07711a568b1389bd2.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Potato\.android\build-cache\75b0cc097032514c27f3015b4c88085d46f95914\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="44ee06abb66da30f5855e6bf54574e64cdcd982a">
+        <dex dex="C:\Users\Potato\Desktop\CMSC434\Kiosk4\app\build\intermediates\pre-dexed\debug\classes_ef43dcd7e67da8ad1e1a2592a091a17f79868d98.jar" />
+    </item>
+
+</items>

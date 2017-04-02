@@ -56,8 +56,6 @@ public class MainActivity extends AppCompatActivity implements ActionBar.TabList
         int nTabSelected = tab.getPosition();
         switch (nTabSelected) {
             case 0:
-                if (lastTab != -1)
-                    recreate();
                 setContentView(R.layout.home_tab);
                 break;
             case 1:
@@ -67,7 +65,8 @@ public class MainActivity extends AppCompatActivity implements ActionBar.TabList
                 setContentView(R.layout.directory_tab);
                 break;
             case 3:
-                setContentView(R.layout.events_tab);
+                Intent m3 = new Intent(getApplicationContext(), EventsTab.class);
+                startActivity(m3);
                 break;
         }
 
@@ -104,27 +103,6 @@ public class MainActivity extends AppCompatActivity implements ActionBar.TabList
 
         return super.onOptionsItemSelected(item);
     }
-
-        /*
-        items = new ArrayList<Events>();
-        list = (ListView) findViewById(R.id.list);
-        items.add(new Events("google", "Google", "Lobby Day! Bring your resumes!" +
-                "\n2PM-6PM"));
-        items.add(new Events("awc", "Association for Women in Computing", "General" +
-                " body meeting.\n6PM-9PM"));
-        items.add(new Events("john", "Guest Lecture", "Esteemed researcher John Smith will" +
-                " be visiting to discuss his work on common names\n7PM-8PM"));
-        items.add(new Events("google", "Google", "Lobby Day! Bring your resumes!" +
-                "\n2PM-6PM"));
-        items.add(new Events("awc", "Association for Women in Computing", "General" +
-                " body meeting.\n6PM-9PM"));
-        items.add(new Events("john", "Guest Lecture", "Esteemed researcher John Smith will" +
-                " be visiting to discuss his work on common names\n7PM-8PM"));
-
-        adapterEvents adp = new adapterEvents(this, items);
-        list.setAdapter(adp);*/
-
-
 //        list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 //            @Override
 //            public void onItemClick(AdapterView<?> arg0, View arg1, int arg2,

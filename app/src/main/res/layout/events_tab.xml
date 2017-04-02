@@ -1,14 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/actionbar_tab_1"
     android:orientation="vertical">
-
-    <TextView
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:textSize="22sp"
-        android:text="events tab" />
+        android:layout_height="wrap_content">
+
+
+        <EditText
+            android:id="@+id/search"
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Google Tech Talk....."
+            android:inputType="textPersonName" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="25dp"
+            android:layout_height="match_parent"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/search"
+            android:layout_marginRight="10dp"
+            android:onClick="search"/>
+
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="400dp"
+            android:layout_height="match_parent"/>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/listcategory"
+        android:layout_width="match_parent"
+        android:indicatorLeft="?android:attr/expandableListPreferredItemIndicatorLeft"
+        android:layout_height="match_parent">
+        <ListView
+            android:layout_width="fill_parent"
+            android:id="@+id/list2"
+            android:layout_marginTop="10dp"
+            android:divider="@null"
+            android:layout_height="480dp"
+            android:layout_marginBottom="20dp"
+            android:dividerHeight="0dp"
+            android:background="@drawable/border"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/list2"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:scaleType="fitStart"
+            android:src="@drawable/cs_logo" />
+    </RelativeLayout>
 </LinearLayout>

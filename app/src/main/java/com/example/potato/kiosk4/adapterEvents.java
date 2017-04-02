@@ -9,12 +9,14 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class adapterEvents extends BaseAdapter{
 
     Context context;
     List<Events> rowItems;
+    ArrayList<Integer> hidden = new ArrayList<>();
 
     adapterEvents(Context context, List<Events> rowItems) {
         this.context = context;
@@ -23,8 +25,12 @@ public class adapterEvents extends BaseAdapter{
 
     @Override
     public int getCount() {
-        return rowItems.size();
+        return rowItems.size() - hidden.size();
     }
+
+    public void remove(int pos){hidden.add(pos);}
+
+    public void clearhidden(){hidden.clear();}
 
     @Override
     public Object getItem(int position) {
@@ -45,6 +51,12 @@ public class adapterEvents extends BaseAdapter{
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
+
+        for(Integer hiddenIndex : hidden) {
+            if(hiddenIndex <= position) {
+                position = position + 1;
+            }
+        }
 
         ViewHolder holder = null;
 
