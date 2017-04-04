@@ -3,12 +3,126 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/actionbar_tab_1"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="#ebeef4">
 
     <TextView
-        android:layout_width="wrap_content"
+        android:id="@+id/directory"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="0dp"
+        android:layout_marginLeft="5dp"
+        android:text="Directory"
         android:textSize="22sp"
-        android:text="directory tab" />
+        android:textColor="#DB4449"
+        />
+    <!--android:gravity="center_horizontal"-->
+    <TextView
+        android:text=""
+        android:layout_width="match_parent"
+        android:id="@+id/divider"
+        android:background="@color/colorAccent"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_height="2px"/>
+
+    <EditText
+        android:id="@+id/etSearch"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:imeOptions="actionDone"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="700dp"
+        android:singleLine = "true"
+        android:hint="Search"
+        android:background="@drawable/border3"
+        android:padding="5dip"
+        android:windowSoftInputMode="adjustPan"
+        />
+
+    <ListView
+        android:id="@+id/header_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/border4"
+        android:padding="5dip"
+        android:layout_marginTop="10dp">
+
+    </ListView>
+
+    <ListView
+        android:id="@+id/mobile_list"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/border5"
+        android:padding="10dip"
+        android:layout_marginBottom="1dp"
+        android:divider="#DB4449"
+        android:dividerHeight="1dip"
+        android:layout_weight="3.8"
+        >
+
+
+    </ListView>
+
+    <TextView
+        android:id="@+id/announcements"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="25dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        android:gravity="center|bottom"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/BrendanIribe"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:layout_marginBottom="0dp"
+            android:layout_marginLeft="0dp"
+            android:text="The Brendan Iribe Center"
+            android:textSize="23sp"
+            android:textColor="@android:color/white"
+            android:background="#DB4449"
+            android:textStyle="bold"
+            android:gravity="center"
+            />
+        <TextView
+            android:id="@+id/BrendanIribe2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="0dp"
+            android:layout_marginLeft="0dp"
+            android:text="For Computer Science and Innovation\n"
+            android:textSize="16sp"
+            android:textColor="#FED31E"
+            android:background="#DB4449"
+            android:gravity="center"
+            android:textStyle=""
+            />
+    </LinearLayout>
+
+    <!--<ImageView-->
+        <!--android:id="@+id/cs_logo"-->
+        <!--android:layout_width="238px"-->
+        <!--android:layout_height="83px"-->
+        <!--android:scaleType="fitStart"-->
+        <!--android:src="@drawable/cs_logo"-->
+        <!--android:layout_weight="1"-->
+        <!--android:layout_marginBottom="10dp"-->
+        <!--android:layout_marginLeft="25dp"-->
+        <!--android:layout_marginRight="25dp"/>-->
+
 </LinearLayout>
