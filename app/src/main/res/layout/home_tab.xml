@@ -76,20 +76,38 @@
         android:layout_weight="1"
         android:layout_marginBottom="20dp"
         android:dividerHeight="0dp"
-        android:background="@drawable/border"
+        android:background="@drawable/border3"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"/>
 
-    <ImageView
+    <LinearLayout
+        android:id="@+id/listcategory"
         android:layout_width="match_parent"
+        android:indicatorLeft="?android:attr/expandableListPreferredItemIndicatorLeft"
         android:layout_height="match_parent"
-        android:src="@drawable/cs_logo"
-        android:scaleType="fitStart"
-        android:layout_below="@id/list"
-        android:id="@+id/cslogo"
-        android:layout_alignParentBottom="true"
-        android:adjustViewBounds="true"
-        android:layout_marginLeft="10dp"
-        android:layout_marginBottom="10dp"/>
-
+        android:gravity="center|bottom"
+        android:orientation = "vertical">
+        <TextView
+            android:id="@+id/BrendanIribe"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:text="The Brendan Iribe Center"
+            android:textSize="23sp"
+            android:textColor="@android:color/white"
+            android:background="#DB4449"
+            android:textStyle="bold"
+            android:gravity="center"
+            />
+        <TextView
+            android:id="@+id/BrendanIribe2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="For Computer Science and Innovation\n"
+            android:textSize="16sp"
+            android:textColor="#FED31E"
+            android:background="#DB4449"
+            android:gravity="center"
+            android:layout_marginBottom="1dp"/>
+    </LinearLayout>
 </RelativeLayout>

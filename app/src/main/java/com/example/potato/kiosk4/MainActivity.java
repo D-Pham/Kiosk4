@@ -1,5 +1,6 @@
 package com.example.potato.kiosk4;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.ActionBar;
@@ -10,11 +11,13 @@ import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.EditText;
 import android.text.TextWatcher;
 import android.text.Editable;
+import android.widget.Spinner;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -27,9 +30,11 @@ import static com.example.potato.kiosk4.Constant.THIRD_COLUMN;
 import static com.example.potato.kiosk4.Constant.FOURTH_COLUMN;
 
 public class MainActivity extends AppCompatActivity implements ActionBar.TabListener{
-    int lastTab = -1;
     List<Events> items;
     ListView list;
+    ListView eventlist;
+    adapterEvents adp;
+    adapterEvents eventtabadp;
     private ArrayList<HashMap> dirList;
     private listviewAdapter adapter;
     private listviewAdapter adapter1;
@@ -65,23 +70,6 @@ public class MainActivity extends AppCompatActivity implements ActionBar.TabList
         ab.addTab(ab.newTab().setText("Directory").setTabListener(this));
         ab.addTab(ab.newTab().setText("Events").setTabListener(this));
 
-        items = new ArrayList<Events>();
-        items.add(new Events("google", "Google", "Lobby Day! Bring your resumes!" +
-                "\n2PM-6PM"));
-        items.add(new Events("awc", "Association for Women in Computing", "General" +
-                " body meeting.\n6PM-9PM"));
-        items.add(new Events("john", "Guest Lecture", "Esteemed researcher John Smith will" +
-                " be visiting to discuss his work on common names\n7PM-8PM"));
-        items.add(new Events("google", "Google", "Lobby Day! Bring your resumes!" +
-                "\n2PM-6PM"));
-        items.add(new Events("awc", "Association for Women in Computing", "General" +
-                " body meeting.\n6PM-9PM"));
-        items.add(new Events("john", "Guest Lecture", "Esteemed researcher John Smith will" +
-                " be visiting to discuss his work on common names\n7PM-8PM"));
-
-        adapterEvents adp = new adapterEvents(this, items);
-        list = (ListView) findViewById(R.id.list);
-        list.setAdapter(adp);
     }
 
     private void initialize() {
@@ -96,9 +84,24 @@ public class MainActivity extends AppCompatActivity implements ActionBar.TabList
         int nTabSelected = tab.getPosition();
         switch (nTabSelected) {
             case 0:
-                if (lastTab != -1)
-                    recreate();
                 setContentView(R.layout.home_tab);
+                items = new ArrayList<>();
+                items.add(new Events("google", "Google 1", "Lobby Day! Bring your resumes!" +
+                        "\n2PM-6PM","Tech Talks"));
+                items.add(new Events("awc", "Association for Women in Computing", "General" +
+                        " body meeting.\n6PM-9PM","Club Events"));
+                items.add(new Events("john", "Guest Lecture", "Esteemed researcher John Smith will" +
+                        " be visiting to discuss his work on common names\n7PM-8PM","Guest Lectures"));
+                items.add(new Events("google", "Google 2", "Lobby Day! Bring your resumes!" +
+                        "\n2PM-6PM","Tech Talks"));
+                items.add(new Events("awc", "Association for Women in Computing", "General" +
+                        " body meeting.\n6PM-9PM","Club Events"));
+                items.add(new Events("john", "Guest Lecture", "Esteemed researcher Piddly Diddly" +
+                        " will be visiting to discuss his work on uncommon names\n5PM-6PM","Guest Lectures"));
+
+                adapterEvents adp = new adapterEvents(this, items);
+                list = (ListView) findViewById(R.id.list);
+                list.setAdapter(adp);
                 break;
             case 1:
                 setContentView(R.layout.map_tab);
@@ -120,8 +123,6 @@ public class MainActivity extends AppCompatActivity implements ActionBar.TabList
                 initialize();
                 adapter1 = new listviewAdapter(this, dirList);
                 lview.setAdapter(adapter1);
-
-
 
                 etSearch.addTextChangedListener(new TextWatcher() {
 
@@ -148,10 +149,16 @@ public class MainActivity extends AppCompatActivity implements ActionBar.TabList
                 break;
             case 3:
                 setContentView(R.layout.events_tab);
+                eventtabadp = new adapterEvents(this, items);
+                eventlist = (ListView) findViewById(R.id.list2);
+                eventlist.setAdapter(eventtabadp);
+
+                Spinner dropdown = (Spinner)findViewById(R.id.spinner);
+                String[] categories = new String[]{"All Events","Tech Talks", "Club Events", "Minority Groups","Guest Lectures"};
+                ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, categories);
+                dropdown.setAdapter(adapter);
                 break;
         }
-
-        lastTab = tab.getPosition();
     }
 
     private void populateDirectoryList(int i) {
@@ -419,43 +426,32 @@ public class MainActivity extends AppCompatActivity implements ActionBar.TabList
         return super.onOptionsItemSelected(item);
     }
 
-        /*
-        items = new ArrayList<Events>();
-        list = (ListView) findViewById(R.id.list);
-        items.add(new Events("google", "Google", "Lobby Day! Bring your resumes!" +
-                "\n2PM-6PM"));
-        items.add(new Events("awc", "Association for Women in Computing", "General" +
-                " body meeting.\n6PM-9PM"));
-        items.add(new Events("john", "Guest Lecture", "Esteemed researcher John Smith will" +
-                " be visiting to discuss his work on common names\n7PM-8PM"));
-        items.add(new Events("google", "Google", "Lobby Day! Bring your resumes!" +
-                "\n2PM-6PM"));
-        items.add(new Events("awc", "Association for Women in Computing", "General" +
-                " body meeting.\n6PM-9PM"));
-        items.add(new Events("john", "Guest Lecture", "Esteemed researcher John Smith will" +
-                " be visiting to discuss his work on common names\n7PM-8PM"));
-
-        adapterEvents adp = new adapterEvents(this, items);
-        list.setAdapter(adp);*/
-
-
-//        list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-//            @Override
-//            public void onItemClick(AdapterView<?> arg0, View arg1, int arg2,
-//                                    long arg3) {
-//                Events selection = (Events) arg0.getItemAtPosition(arg2);
-//                /**
-//                 * PLACE HOLDER. Clicking on event item will initiate to a new intent,
-//                 * not yet created in order to view more detail on the event. Name and
-//                 * picture of event will be packaged into the intent as extras.
-//                 *
-//                 * Intent intent = new Intent(getApplicationContext(), EventItem.class);
-//                 * intent.putExtra("name",selection.getName().toString());
-//                 * intent.putExtra("pic",selection.getPic().toString());
-//                 * startActivity(intent);
-//                 */
-//            }
-//        });
+    public void search(View view){
+        eventtabadp.clearhidden();
+        Boolean match = false;
+        String[] searchtext = ((TextView) findViewById(R.id.search)).getText().toString().split(" ");
+        String category = ((Spinner)findViewById(R.id.spinner)).getSelectedItem().toString();
+        System.out.print(searchtext + category);
+        List<Integer> toremove = new ArrayList<>();
+        int num = eventtabadp.getCount();
+        for (int i = 0; i < num; i++) {
+            Events tempitem = (Events) eventtabadp.getItem(i);
+            for (String x: searchtext)
+                if (category.equals("All Events") || category.equals(tempitem.category)) {
+                    if (tempitem.name.toLowerCase().contains(x.toLowerCase()) ||
+                            tempitem.description.toLowerCase().contains(x.toLowerCase()))
+                        match = true;
+                } else {
+                    toremove.add(i);
+                }
+            if (!match)
+                toremove.add(i);
+            match = false;
+        }
+        for(int x: toremove)
+            eventtabadp.remove(x);
+        eventtabadp.notifyDataSetChanged();
+    }
 }
 
 

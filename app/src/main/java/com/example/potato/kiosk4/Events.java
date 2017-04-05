@@ -5,6 +5,7 @@ public class Events {
     String pic;
     String name;
     String description;
+    String category;
 
     public String getPic() {
         return pic;
@@ -30,9 +31,18 @@ public class Events {
         this.description = description;
     }
 
-    public Events(String pic, String name, String description){
+    public String getCategory() {
+        return category;
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
+    }
+
+    public Events(String pic, String name, String description, String category){
         this.pic = pic;
         this.name = name;
         this.description = description;
+        this.category = category;
     }
 }
