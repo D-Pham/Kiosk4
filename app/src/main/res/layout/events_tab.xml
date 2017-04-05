@@ -7,60 +7,78 @@
     android:orientation="vertical">
     <LinearLayout
         android:layout_marginTop="20dp"
-        android:layout_marginLeft="20dp"
+        android:layout_marginLeft="10dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
-
 
         <EditText
             android:id="@+id/search"
             android:layout_width="400dp"
             android:layout_height="wrap_content"
+            android:background="@drawable/border3"
             android:ems="10"
-            android:hint="Google Tech Talk....."
+            android:hint="  Search"
             android:inputType="textPersonName" />
 
         <ImageView
             android:id="@+id/imageView"
             android:layout_width="25dp"
             android:layout_height="match_parent"
-            android:scaleType="fitCenter"
-            app:srcCompat="@drawable/search"
+            android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
-            android:onClick="search"/>
+            android:onClick="search"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/search" />
 
         <Spinner
             android:id="@+id/spinner"
             android:layout_width="400dp"
-            android:layout_height="match_parent"/>
+            android:layout_height="wrap_content" />
 
     </LinearLayout>
 
-    <RelativeLayout
+    <LinearLayout
         android:id="@+id/listcategory"
         android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center|bottom"
         android:indicatorLeft="?android:attr/expandableListPreferredItemIndicatorLeft"
-        android:layout_height="match_parent">
+        android:orientation="vertical">
+
         <ListView
-            android:layout_width="fill_parent"
             android:id="@+id/list2"
-            android:layout_marginTop="10dp"
-            android:divider="@null"
+            android:layout_width="fill_parent"
             android:layout_height="480dp"
             android:layout_marginBottom="20dp"
-            android:dividerHeight="0dp"
-            android:background="@drawable/border"
             android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"/>
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/border3"
+            android:divider="@null"
+            android:dividerHeight="0dp" />
 
-        <ImageView
+        <TextView
+            android:id="@+id/BrendanIribe"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_below="@+id/list2"
-            android:layout_centerHorizontal="true"
-            android:layout_marginBottom="10dp"
-            android:layout_marginLeft="10dp"
-            android:scaleType="fitStart"
-            android:src="@drawable/cs_logo" />
-    </RelativeLayout>
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:background="#DB4449"
+            android:gravity="center"
+            android:text="The Brendan Iribe Center"
+            android:textColor="@android:color/white"
+            android:textSize="23sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/BrendanIribe2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="1dp"
+            android:background="#DB4449"
+            android:gravity="center"
+            android:text="For Computer Science and Innovation\n"
+            android:textColor="#FED31E"
+            android:textSize="16sp" />
+    </LinearLayout>
+
 </LinearLayout>
