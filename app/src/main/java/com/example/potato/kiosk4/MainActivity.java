@@ -427,6 +427,7 @@ public class MainActivity extends AppCompatActivity implements ActionBar.TabList
         return super.onOptionsItemSelected(item);
     }
 
+    // OnClick search method executed when clicking on the search button within the events tab
     public void search(View view){
         eventtabadp.clearhidden();
         Boolean match = false;
@@ -438,13 +439,10 @@ public class MainActivity extends AppCompatActivity implements ActionBar.TabList
         for (int i = 0; i < num; i++) {
             Events tempitem = (Events) eventtabadp.getItem(i);
             for (String x: searchtext)
-                if (category.equals("All Events") || category.equals(tempitem.category)) {
-                    if (tempitem.name.toLowerCase().contains(x.toLowerCase()) ||
-                            tempitem.description.toLowerCase().contains(x.toLowerCase()))
+                if (category.equals("All Events") || category.equals(tempitem.getCategory()))
+                    if (tempitem.getName().toLowerCase().contains(x.toLowerCase()) ||
+                            tempitem.getDescription().toLowerCase().contains(x.toLowerCase()))
                         match = true;
-                } else {
-                    toremove.add(i);
-                }
             if (!match)
                 toremove.add(i);
             match = false;
@@ -453,6 +451,7 @@ public class MainActivity extends AppCompatActivity implements ActionBar.TabList
             eventtabadp.remove(x);
         eventtabadp.notifyDataSetChanged();
     }
+
     public void setMapGround(View view){
         ((ImageView) findViewById(R.id.mapImage)).setImageResource(R.drawable.ground_floor);
     }
