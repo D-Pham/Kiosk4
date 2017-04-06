@@ -5,6 +5,7 @@ import static com.example.potato.kiosk4.Constant.SECOND_COLUMN;
 import static com.example.potato.kiosk4.Constant.THIRD_COLUMN;
 import static com.example.potato.kiosk4.Constant.FOURTH_COLUMN;
 
+import android.app.Activity;
 import java.util.ArrayList;
 import java.util.HashMap;
 import android.app.Activity;
@@ -14,6 +15,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Filterable;
 import android.widget.Filter;
@@ -101,8 +104,12 @@ public class listviewAdapter extends BaseAdapter implements Filterable
 
             public void onClick(View v) {
                 // This is a placeholder until more concrete functionality is implemented
-                Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.cs.umd.edu/people/egolub"));
-                activity.startActivity(browserIntent);
+                //Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.cs.umd.edu/people/egolub"));
+                //activity.startActivity(browserIntent);
+                activity.setContentView(R.layout.map_tab);
+                ImageView img = (ImageView) activity.findViewById(R.id.mapImage);
+                img.setImageResource(R.drawable.floor_one_3);
+                ((EditText) activity.findViewById(R.id.mapSearch)).setText("Evan Golub");
             }
         });
 

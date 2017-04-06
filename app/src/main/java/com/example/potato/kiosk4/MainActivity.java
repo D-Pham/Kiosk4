@@ -12,6 +12,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.EditText;
@@ -451,6 +452,50 @@ public class MainActivity extends AppCompatActivity implements ActionBar.TabList
         for(int x: toremove)
             eventtabadp.remove(x);
         eventtabadp.notifyDataSetChanged();
+    }
+    public void setMapGround(View view){
+        ((ImageView) findViewById(R.id.mapImage)).setImageResource(R.drawable.ground_floor);
+    }
+    public void setMapFirst(View view){
+        ((ImageView) findViewById(R.id.mapImage)).setImageResource(R.drawable.first_floor);
+    }
+    public void setMapUpper(View view) {
+        ((ImageView) findViewById(R.id.mapImage)).setImageResource(R.drawable.upper_floor);
+    }
+
+    public void displayExits(View view){
+
+        ImageView img = (ImageView) findViewById(R.id.mapImage);
+        CheckBox chk = (CheckBox) findViewById(R.id.displayExits);
+        if (chk.isChecked()) {
+            img.setImageResource(R.drawable.floor_one_6);
+        } else {
+            img.setImageResource(R.drawable.first_floor);
+        }
+    }
+
+    public void searchMap(View view) {
+        String in = ((TextView) findViewById(R.id.mapSearch)).getText().toString().toLowerCase();
+        ImageView img = (ImageView) findViewById(R.id.mapImage);
+        switch (in){
+            case "tutor room":
+                img.setImageResource(R.drawable.floor_one_5);
+                break;
+            case "grad room":
+                img.setImageResource(R.drawable.floor_one_4);
+                break;
+            case "1115":
+            case "evan golub":
+                img.setImageResource(R.drawable.floor_one_3);
+                break;
+            case "1114":
+                img.setImageResource(R.drawable.floor_one_1);
+                break;
+            case "1113":
+                img.setImageResource(R.drawable.floor_one_2);
+                break;
+        }
+
     }
 }
 
